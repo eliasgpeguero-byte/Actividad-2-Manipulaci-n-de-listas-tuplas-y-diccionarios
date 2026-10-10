@@ -1,29 +1,24 @@
-carreras: tuple[str, ...] = ("Ingeniería de Software", "Contabilidad", "Derecho")
+ carreras: tuple[str, ...] = ("Ingeniería de Software", "Contabilidad", "Derecho")
 
 personas: list[tuple[str, str, int, int]] = [
- 
 ]
 
 estudiantes: list[dict[str, str | int]] = [
- 
 ]
 
- 
 for _ in range(5):
     nombre = input("Ingrese el nombre: ")
     apellido = input("Ingrese el apellido: ")
     edad = int(input("Ingrese la edad: "))
     carrera = int(input("Ingrese la carrera (0: Ing. de Software, 1: Contabilidad, 2: Derecho): "))
 
-    
+    # 3. Crear la tupla y agregarla a la lista personas
     persona = (nombre, apellido, edad, carrera)
     personas.append(persona)
     print("")
 
- 
 for persona in personas:
     nombre, apellido, edad, indice_carrera = persona
-    
     
     nombre_carrera = carreras[indice_carrera]
 
@@ -36,6 +31,6 @@ for persona in personas:
     
     estudiantes.append(diccionario_estudiante)
 
-
+# 5. Recorrer la lista estudiantes y mostrar la información con el formato pedido
 for estudiante in estudiantes:
     print(f"{estudiante['nombre']} {estudiante['apellido']} tiene {estudiante['edad']} años y estudia {estudiante['carrera']}")
