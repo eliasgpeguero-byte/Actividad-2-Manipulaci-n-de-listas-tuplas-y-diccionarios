@@ -15,7 +15,7 @@ for _ in range(5):
     edad = int(input("Ingrese la edad: "))
     carrera = int(input("Ingrese la carrera (0: Ing. de Software, 1: Contabilidad, 2: Derecho): "))
 
-    # 3. Crear la tupla y agregarla a la lista personas
+    
     persona = (nombre, apellido, edad, carrera)
     personas.append(persona)
     print("")
@@ -24,7 +24,7 @@ for _ in range(5):
 for persona in personas:
     nombre, apellido, edad, indice_carrera = persona
     
-    # Obtener el nombre de la carrera usando el índice
+    
     nombre_carrera = carreras[indice_carrera]
 
     diccionario_estudiante = {
